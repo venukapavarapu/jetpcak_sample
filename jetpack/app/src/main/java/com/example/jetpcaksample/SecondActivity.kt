@@ -1,6 +1,5 @@
-package com.example.samplecompose
+package com.example.jetpcaksample
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -21,7 +20,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.compose.R
 
 class SecondActivity : ComponentActivity() {
 
@@ -90,7 +88,6 @@ class SecondActivity : ComponentActivity() {
                 .padding(all = 5.dp)) {
                 Text(text = "Click to Show Dialog")
             }
-
 
         }
     }
