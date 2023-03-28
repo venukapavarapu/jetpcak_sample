@@ -96,8 +96,6 @@ fun Greeting(@PreviewParameter(NameProvider::class) name: Sample) {
             Toast
                 .makeText(context, name.name, Toast.LENGTH_SHORT)
                 .show()
-
-            context.startActivity(Intent(context,SecondActivity::class.java))
         },
         elevation = 5.dp,
         shape = MaterialTheme.shapes.medium){
@@ -113,6 +111,9 @@ fun Greeting(@PreviewParameter(NameProvider::class) name: Sample) {
                 modifier = Modifier
                     .size(60.dp)
                     .clip(CircleShape)
+                    .clickable {
+                        context.startActivity(Intent(context,SecondActivity::class.java))
+                    },
             )
 
             Spacer(modifier = Modifier.padding(horizontal = 10.dp))
@@ -120,7 +121,10 @@ fun Greeting(@PreviewParameter(NameProvider::class) name: Sample) {
 
                 Text(
                     text = name.name,
-                    modifier = Modifier.padding(all = 1.dp),
+                    modifier = Modifier.padding(all = 1.dp)
+                        .clickable {
+                            context.startActivity(Intent(context,ThirdActivity::class.java))
+                        },
 
                     color = Color.Black,
                     fontSize = 16.sp,
